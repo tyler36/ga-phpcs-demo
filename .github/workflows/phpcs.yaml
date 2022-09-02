@@ -15,7 +15,10 @@ jobs:
       - name: "☁️ checkout repository"
         uses: actions/checkout@v2
 
+      - name: "📦 Install dependencies"
+        run: composer install --dev --prefer-dist --no-progress --no-suggest
+
       - name: "🧹 Run PHPCS"
         uses: chekalsky/phpcs-action@v1
-        # with:
-        #   enable_warnings: true
+        with:
+          phpcs_bin_path: './vendor/bin/phpcs'
