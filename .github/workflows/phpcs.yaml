@@ -1,0 +1,21 @@
+name: PHPCS check
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  phpcs:
+    name: "🧹 PHPCS"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v2
+
+      - name: "🧹 Run PHPCS"
+        uses: chekalsky/phpcs-action@v1
+        # with:
+        #   enable_warnings: true
