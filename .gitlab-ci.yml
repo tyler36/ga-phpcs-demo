@@ -42,7 +42,7 @@ composer:
   dependencies:
     - "docker-build"
   script:
-      - ddev composer install --no-ansi --no-interaction --no-progress --no-plugins --dev
+      - ddev composer install --no-ansi --no-interaction --no-progress --no-plugins
   artifacts:
     # (Optional) Give it an expiration date,
     # after that period you won't be able to
